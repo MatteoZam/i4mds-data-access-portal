@@ -1,0 +1,17 @@
+[
+  {
+    "id": "i4MDS-001",
+    "title": "bulkRNAseq CD34+ cells in MDS/AML patients (i4MDS data)",
+    "description": "Processed bulk RNA-seq data generated from CD34+ cells from patients with myelodysplastic syndromes (MDS) and acute myeloid leukemia (AML), deposited in the i4MDS DataSpace.",
+    "tissue": "Bone marrow",
+    "omics": [
+      "Bulk RNA-seq",
+      "CD34+"
+    ],
+    "disease": "MDS / AML",
+    "data_level": "Processed",
+    "access": "Restricted",
+    "zenodo_url": "https://zenodo.org/records/21718032",
+    "doi": "10.5281/zenodo.21718032"
+  }
+]

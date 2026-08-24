@@ -12,10 +12,15 @@
 
   <meta
     name="description"
-    content="i4MDS Data Access Portal - Request access to multi-omics datasets."
+    content="i4MDS Data Access Portal - Data access request."
   >
 
-  <title>Request Access | i4MDS Data Access Portal</title>
+  <title>
+    Request Access | i4MDS Data Access Portal
+  </title>
+
+
+  <!-- Google Fonts -->
 
   <link
     rel="preconnect"
@@ -33,10 +38,16 @@
     rel="stylesheet"
   >
 
+
+  <!-- Bootstrap -->
+
   <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
     rel="stylesheet"
   >
+
+
+  <!-- Main stylesheet -->
 
   <link
     rel="stylesheet"
@@ -48,7 +59,8 @@
 
     .page-hero {
 
-      padding: 150px 0 70px;
+      padding:
+        150px 0 80px;
 
       background:
         linear-gradient(
@@ -60,56 +72,82 @@
     }
 
 
-    .form-section {
+    .request-card {
 
-      background: #ffffff;
+      background:
+        #ffffff;
 
       border:
         1px solid
         #e5eaf0;
 
-      border-radius: 16px;
+      border-radius:
+        16px;
 
-      padding: 30px;
-
-      margin-bottom: 25px;
+      padding:
+        32px;
 
       box-shadow:
         0 5px 20px
-        rgba(15,76,129,.04);
+        rgba(15, 76, 129, 0.04);
+
+    }
+
+
+    .form-section {
+
+      margin-bottom:
+        40px;
 
     }
 
 
     .form-section-title {
 
-      font-size: 1.15rem;
+      font-size:
+        1.1rem;
 
-      font-weight: 750;
+      font-weight:
+        750;
 
-      color: #0f4c81;
+      margin-bottom:
+        6px;
 
-      margin-bottom: 5px;
+      color:
+        #0f4c81;
 
     }
 
 
     .form-section-description {
 
-      color: #667085;
+      color:
+        #667085;
 
-      font-size: .88rem;
+      font-size:
+        0.88rem;
 
-      margin-bottom: 25px;
+      margin-bottom:
+        20px;
 
     }
 
 
     .form-label {
 
-      font-weight: 600;
+      font-weight:
+        650;
 
-      font-size: .88rem;
+      font-size:
+        0.88rem;
+
+    }
+
+
+    .required {
+
+      color:
+        #dc3545;
 
     }
 
@@ -117,13 +155,15 @@
     .form-control,
     .form-select {
 
-      border-radius: 9px;
+      border-radius:
+        10px;
 
       border:
         1px solid
         #d7dee8;
 
-      padding: 11px 13px;
+      padding:
+        11px 14px;
 
     }
 
@@ -135,27 +175,21 @@
         #2c7be5;
 
       box-shadow:
-        0 0 0 .2rem
-        rgba(44,123,229,.12);
+        0 0 0 0.2rem
+        rgba(44, 123, 229, 0.1);
 
     }
 
 
     textarea.form-control {
 
-      min-height: 130px;
+      min-height:
+        120px;
 
     }
 
 
-    .required {
-
-      color: #c0392b;
-
-    }
-
-
-    .dataset-selected {
+    .selected-dataset {
 
       background:
         #eef5fb;
@@ -164,64 +198,105 @@
         1px solid
         #d7e6f4;
 
-      border-radius: 12px;
+      border-radius:
+        10px;
 
-      padding: 18px;
+      padding:
+        14px 16px;
 
-      margin-bottom: 20px;
-
-    }
-
-
-    .dataset-selected-label {
-
-      font-size: .72rem;
-
-      text-transform: uppercase;
-
-      letter-spacing: .08em;
-
-      font-weight: 800;
-
-      color: #2c7be5;
+      margin-top:
+        12px;
 
     }
 
 
-    .dataset-selected-name {
+    .selected-dataset-label {
 
-      font-size: 1rem;
+      font-size:
+        0.7rem;
 
-      font-weight: 700;
+      text-transform:
+        uppercase;
 
-      color: #0f4c81;
+      letter-spacing:
+        0.08em;
 
-      margin-top: 4px;
+      font-weight:
+        800;
+
+      color:
+        #0f4c81;
 
     }
 
 
-    .privacy-note {
+    .selected-dataset-name {
+
+      font-weight:
+        650;
+
+      margin-top:
+        3px;
+
+    }
+
+
+    .info-box {
 
       background:
-        #f8f9fa;
+        #f7f9fc;
 
-      border-radius: 10px;
+      border-radius:
+        12px;
 
-      padding: 15px;
+      padding:
+        18px;
 
-      font-size: .82rem;
+      font-size:
+        0.88rem;
 
-      color: #667085;
+      color:
+        #667085;
+
+    }
+
+
+    .consent-box {
+
+      background:
+        #f8fbff;
+
+      border:
+        1px solid
+        #d7e6f4;
+
+      border-radius:
+        12px;
+
+      padding:
+        18px;
 
     }
 
 
-    .submit-area {
+    .submit-box {
 
-      padding: 20px 0 60px;
+      padding-top:
+        10px;
 
     }
+
+
+    .form-check-label {
+
+      font-size:
+        0.88rem;
+
+      color:
+        #475467;
+
+    }
+
 
   </style>
 
@@ -231,11 +306,14 @@
 <body>
 
 
-<!-- NAVBAR -->
+<!-- ========================================================= -->
+<!-- NAVIGATION -->
+<!-- ========================================================= -->
 
 <nav class="navbar navbar-expand-lg fixed-top portal-navbar">
 
   <div class="container">
+
 
     <a
       class="navbar-brand portal-brand"
@@ -348,953 +426,995 @@
 
 
 
-<!-- HERO -->
-
-<section class="page-hero">
-
-  <div class="container">
-
-    <div class="section-label">
-      DATA ACCESS
-    </div>
-
-
-    <h1
-      class="display-4 fw-bold"
-      style="letter-spacing:-.05em;"
-    >
-      Request Access
-    </h1>
-
-
-    <p class="lead text-muted col-lg-8">
-
-      Submit a research proposal to request access
-      to restricted i4MDS multi-omics datasets.
-
-    </p>
-
-  </div>
-
-</section>
-
-
-
-<!-- FORM -->
+<!-- ========================================================= -->
+<!-- MAIN -->
+<!-- ========================================================= -->
 
 <main>
 
-  <div class="container">
 
+  <!-- HERO -->
 
-    <form
-      id="accessForm"
-      class="needs-validation"
-      action="https://formspree.io/f/xppaeegp"
-      method="POST"
-      novalidate
-    >
+  <section class="page-hero">
 
+    <div class="container">
 
-      <!-- APPLICANT -->
 
-      <section class="form-section">
-
-        <h2 class="form-section-title">
-          1. Applicant Information
-        </h2>
-
-
-        <p class="form-section-description">
-
-          Please provide information about the researcher
-          submitting this request.
-
-        </p>
-
-
-        <div class="row g-3">
-
-
-          <div class="col-md-6">
-
-            <label
-              for="firstName"
-              class="form-label"
-            >
-
-              First name
-              <span class="required">*</span>
-
-            </label>
-
-
-            <input
-              type="text"
-              class="form-control"
-              id="firstName"
-              name="first_name"
-              required
-            >
-
-
-            <div class="invalid-feedback">
-
-              Please enter your first name.
-
-            </div>
-
-          </div>
-
-
-
-          <div class="col-md-6">
-
-            <label
-              for="lastName"
-              class="form-label"
-            >
-
-              Last name
-              <span class="required">*</span>
-
-            </label>
-
-
-            <input
-              type="text"
-              class="form-control"
-              id="lastName"
-              name="last_name"
-              required
-            >
-
-
-            <div class="invalid-feedback">
-
-              Please enter your last name.
-
-            </div>
-
-          </div>
-
-
-
-          <div class="col-md-8">
-
-            <label
-              for="institution"
-              class="form-label"
-            >
-
-              Institution
-              <span class="required">*</span>
-
-            </label>
-
-
-            <input
-              type="text"
-              class="form-control"
-              id="institution"
-              name="institution"
-              required
-            >
-
-
-            <div class="invalid-feedback">
-
-              Please enter your institution.
-
-            </div>
-
-          </div>
-
-
-
-          <div class="col-md-4">
-
-            <label
-              for="country"
-              class="form-label"
-            >
-
-              Country
-              <span class="required">*</span>
-
-            </label>
-
-
-            <input
-              type="text"
-              class="form-control"
-              id="country"
-              name="country"
-              required
-            >
-
-
-            <div class="invalid-feedback">
-
-              Please enter your country.
-
-            </div>
-
-          </div>
-
-
-
-          <div class="col-md-6">
-
-            <label
-              for="department"
-              class="form-label"
-            >
-
-              Department / Research Unit
-
-            </label>
-
-
-            <input
-              type="text"
-              class="form-control"
-              id="department"
-              name="department"
-            >
-
-          </div>
-
-
-
-          <div class="col-md-6">
-
-            <label
-              for="email"
-              class="form-label"
-            >
-
-              Institutional email
-              <span class="required">*</span>
-
-            </label>
-
-
-            <input
-              type="email"
-              class="form-control"
-              id="email"
-              name="email"
-              required
-            >
-
-
-            <div class="invalid-feedback">
-
-              Please enter a valid email address.
-
-            </div>
-
-          </div>
-
-
-
-          <div class="col-md-6">
-
-            <label
-              for="orcid"
-              class="form-label"
-            >
-
-              ORCID
-
-            </label>
-
-
-            <input
-              type="text"
-              class="form-control"
-              id="orcid"
-              name="orcid"
-              placeholder="0000-0000-0000-0000"
-            >
-
-          </div>
-
-        </div>
-
-      </section>
-
-
-
-      <!-- PROJECT -->
-
-      <section class="form-section">
-
-        <h2 class="form-section-title">
-          2. Research Project
-        </h2>
-
-
-        <p class="form-section-description">
-
-          Describe the scientific project for which
-          access to the data is requested.
-
-        </p>
-
-
-        <div class="row g-3">
-
-
-          <div class="col-12">
-
-            <label
-              for="projectTitle"
-              class="form-label"
-            >
-
-              Project title
-              <span class="required">*</span>
-
-            </label>
-
-
-            <input
-              type="text"
-              class="form-control"
-              id="projectTitle"
-              name="project_title"
-              required
-            >
-
-
-            <div class="invalid-feedback">
-
-              Please enter the project title.
-
-            </div>
-
-          </div>
-
-
-
-          <div class="col-md-6">
-
-            <label
-              for="pi"
-              class="form-label"
-            >
-
-              Principal Investigator
-              <span class="required">*</span>
-
-            </label>
-
-
-            <input
-              type="text"
-              class="form-control"
-              id="pi"
-              name="principal_investigator"
-              required
-            >
-
-
-            <div class="invalid-feedback">
-
-              Please enter the Principal Investigator.
-
-            </div>
-
-          </div>
-
-
-
-          <div class="col-md-6">
-
-            <label
-              for="funding"
-              class="form-label"
-            >
-
-              Funding source
-
-            </label>
-
-
-            <input
-              type="text"
-              class="form-control"
-              id="funding"
-              name="funding_source"
-              placeholder="Grant / project / institutional funding"
-            >
-
-          </div>
-
-
-
-          <div class="col-12">
-
-            <label
-              for="projectSummary"
-              class="form-label"
-            >
-
-              Project summary
-              <span class="required">*</span>
-
-            </label>
-
-
-            <textarea
-              class="form-control"
-              id="projectSummary"
-              name="project_summary"
-              required
-              placeholder="Briefly describe the background, rationale and overall aims of the project."
-            ></textarea>
-
-
-            <div class="invalid-feedback">
-
-              Please provide a project summary.
-
-            </div>
-
-          </div>
-
-
-
-          <div class="col-12">
-
-            <label
-              for="objectives"
-              class="form-label"
-            >
-
-              Scientific objectives
-              <span class="required">*</span>
-
-            </label>
-
-
-            <textarea
-              class="form-control"
-              id="objectives"
-              name="scientific_objectives"
-              required
-              placeholder="Describe the main scientific questions or hypotheses that will be investigated."
-            ></textarea>
-
-
-            <div class="invalid-feedback">
-
-              Please describe the scientific objectives.
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </section>
-
-
-
-      <!-- DATA -->
-
-      <section class="form-section">
-
-        <h2 class="form-section-title">
-          3. Requested Data
-        </h2>
-
-
-        <p class="form-section-description">
-
-          Specify the datasets and data types required
-          for your research.
-
-        </p>
-
-
-        <div
-          id="selectedDataset"
-          class="dataset-selected d-none"
-        >
-
-          <div class="dataset-selected-label">
-            Selected dataset
-          </div>
-
-
-          <div
-            id="selectedDatasetName"
-            class="dataset-selected-name"
-          ></div>
-
-        </div>
-
-
-
-        <div class="row g-3">
-
-
-          <div class="col-md-6">
-
-            <label
-              for="dataset"
-              class="form-label"
-            >
-
-              Dataset
-              <span class="required">*</span>
-
-            </label>
-
-
-            <select
-              class="form-select"
-              id="dataset"
-              name="dataset"
-              required
-            >
-
-              <option
-                value=""
-                selected
-                disabled
-              >
-                Select a dataset
-              </option>
-
-
-              <option value="i4MDS-001">
-
-                i4MDS-001 –
-                bulkRNAseq CD34+ cells in MDS/AML
-
-              </option>
-
-            </select>
-
-
-            <div class="invalid-feedback">
-
-              Please select a dataset.
-
-            </div>
-
-          </div>
-
-
-
-          <div class="col-md-6">
-
-            <label
-              for="analysisType"
-              class="form-label"
-            >
-
-              Planned analysis
-              <span class="required">*</span>
-
-            </label>
-
-
-            <select
-              class="form-select"
-              id="analysisType"
-              name="analysis_type"
-              required
-            >
-
-              <option
-                value=""
-                selected
-                disabled
-              >
-                Select an option
-              </option>
-
-
-              <option>
-                Exploratory analysis
-              </option>
-
-              <option>
-                Biomarker discovery
-              </option>
-
-              <option>
-                Prognostic analysis
-              </option>
-
-              <option>
-                Molecular characterization
-              </option>
-
-              <option>
-                Integration with other omics
-              </option>
-
-              <option>
-                Method development
-              </option>
-
-              <option>
-                Other
-              </option>
-
-            </select>
-
-
-            <div class="invalid-feedback">
-
-              Please select the planned analysis.
-
-            </div>
-
-          </div>
-
-
-
-          <div class="col-12">
-
-            <label
-              for="dataUse"
-              class="form-label"
-            >
-
-              How will the requested data be used?
-              <span class="required">*</span>
-
-            </label>
-
-
-            <textarea
-              class="form-control"
-              id="dataUse"
-              name="data_use"
-              required
-              placeholder="Describe the analyses, computational methods and how the requested data will contribute to the project."
-            ></textarea>
-
-
-            <div class="invalid-feedback">
-
-              Please describe how the data will be used.
-
-            </div>
-
-          </div>
-
-
-
-          <div class="col-12">
-
-            <label
-              for="integration"
-              class="form-label"
-            >
-
-              Will the data be integrated with other datasets?
-
-            </label>
-
-
-            <textarea
-              class="form-control"
-              id="integration"
-              name="data_integration"
-              placeholder="If applicable, describe the additional datasets and the purpose of the integration."
-            ></textarea>
-
-          </div>
-
-
-
-          <div class="col-12">
-
-            <label
-              for="outputs"
-              class="form-label"
-            >
-
-              Expected outputs
-
-            </label>
-
-
-            <textarea
-              class="form-control"
-              id="outputs"
-              name="expected_outputs"
-              placeholder="Expected publications, presentations, software, databases or other scientific outputs."
-            ></textarea>
-
-          </div>
-
-        </div>
-
-      </section>
-
-
-
-      <!-- DATA MANAGEMENT -->
-
-      <section class="form-section">
-
-        <h2 class="form-section-title">
-          4. Data Management
-        </h2>
-
-
-        <p class="form-section-description">
-
-          Please describe how the requested data will
-          be stored and protected.
-
-        </p>
-
-
-        <div class="row g-3">
-
-
-          <div class="col-12">
-
-            <label
-              for="storage"
-              class="form-label"
-            >
-
-              Where will the data be stored?
-              <span class="required">*</span>
-
-            </label>
-
-
-            <textarea
-              class="form-control"
-              id="storage"
-              name="data_storage"
-              required
-              placeholder="Describe the institutional storage environment or secure computational infrastructure."
-            ></textarea>
-
-
-            <div class="invalid-feedback">
-
-              Please describe where the data will be stored.
-
-            </div>
-
-          </div>
-
-
-
-          <div class="col-md-6">
-
-            <label
-              for="users"
-              class="form-label"
-            >
-
-              Who will have access to the data?
-              <span class="required">*</span>
-
-            </label>
-
-
-            <textarea
-              class="form-control"
-              id="users"
-              name="authorized_users"
-              required
-              placeholder="List the research team or categories of users."
-            ></textarea>
-
-
-            <div class="invalid-feedback">
-
-              Please specify who will have access.
-
-            </div>
-
-          </div>
-
-
-
-          <div class="col-md-6">
-
-            <label
-              for="thirdParty"
-              class="form-label"
-            >
-
-              Third-party data sharing
-
-            </label>
-
-
-            <textarea
-              class="form-control"
-              id="thirdParty"
-              name="third_party_sharing"
-              placeholder="Will the data be shared with collaborators or third parties?"
-            ></textarea>
-
-          </div>
-
-        </div>
-
-      </section>
-
-
-
-      <!-- DECLARATION -->
-
-      <section class="form-section">
-
-        <h2 class="form-section-title">
-          5. Declaration
-        </h2>
-
-
-        <p class="form-section-description">
-
-          Please confirm that you agree to the
-          consortium's data access conditions.
-
-        </p>
-
-
-        <div class="form-check mb-3">
-
-          <input
-            class="form-check-input"
-            type="checkbox"
-            id="policyAgreement"
-            required
-          >
-
-
-          <label
-            class="form-check-label"
-            for="policyAgreement"
-          >
-
-            I agree to comply with the
-            <a href="policy.html">
-              i4MDS Data Access Policy
-            </a>.
-
-            <span class="required">*</span>
-
-          </label>
-
-
-          <div class="invalid-feedback">
-
-            You must accept the data access policy.
-
-          </div>
-
-        </div>
-
-
-
-        <div class="form-check mb-4">
-
-          <input
-            class="form-check-input"
-            type="checkbox"
-            id="accuracyAgreement"
-            required
-          >
-
-
-          <label
-            class="form-check-label"
-            for="accuracyAgreement"
-          >
-
-            I confirm that the information provided
-            in this application is accurate and complete.
-
-            <span class="required">*</span>
-
-          </label>
-
-
-          <div class="invalid-feedback">
-
-            Please confirm the accuracy of the information.
-
-          </div>
-
-        </div>
-
-
-
-        <div class="privacy-note">
-
-          <strong>Data protection.</strong>
-
-          The information submitted through this application
-          will be used for the purpose of evaluating and
-          managing the request for access to i4MDS datasets.
-          The final data submission and review workflow will
-          be implemented according to the consortium's
-          governance and data protection requirements.
-
-        </div>
-
-      </section>
-
-
-
-      <!-- SUBMIT -->
-
-      <div class="submit-area">
-
-        <button
-          type="submit"
-          class="btn btn-primary btn-lg px-4"
-        >
-
-          Submit request →
-
-        </button>
-
-
-        <div
-          id="formMessage"
-          class="mt-4 d-none"
-        ></div>
-
+      <div class="section-label">
+        i4MDS DATASPACE
       </div>
 
 
-    </form>
+      <h1
+        class="display-4 fw-bold"
+        style="letter-spacing:-.05em;"
+      >
+        Request Data Access
+      </h1>
 
-  </div>
+
+      <p class="lead text-muted col-lg-8">
+
+        Submit a research proposal to request access
+        to restricted i4MDS multi-omics datasets.
+
+        Requests are reviewed by the
+        i4MDS consortium data access committee.
+
+      </p>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- FORM SECTION -->
+
+  <section class="py-5">
+
+    <div class="container">
+
+
+      <div class="row justify-content-center">
+
+        <div class="col-xl-9 col-lg-10">
+
+
+          <div class="request-card">
+
+
+            <!-- ================================================= -->
+            <!-- FORM -->
+            <!-- ================================================= -->
+
+            <form
+              id="accessForm"
+              action="https://formspree.io/f/xppaeegp"
+              method="POST"
+            >
+
+
+              <!-- ================================================= -->
+              <!-- FORM SUBJECT -->
+              <!-- ================================================= -->
+
+              <input
+                type="hidden"
+                name="_subject"
+                value="i4MDS Data Access Request"
+              >
+
+
+              <!-- ================================================= -->
+              <!-- APPLICANT INFORMATION -->
+              <!-- ================================================= -->
+
+              <div class="form-section">
+
+
+                <div class="form-section-title">
+                  Applicant Information
+                </div>
+
+
+                <div class="form-section-description">
+
+                  Please provide your contact and institutional
+                  information.
+
+                </div>
+
+
+
+                <div class="row g-3">
+
+
+                  <!-- FIRST NAME -->
+
+                  <div class="col-md-6">
+
+                    <label
+                      for="firstName"
+                      class="form-label"
+                    >
+
+                      First name
+                      <span class="required">*</span>
+
+                    </label>
+
+
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="firstName"
+                      name="first_name"
+                      required
+                    >
+
+                  </div>
+
+
+
+                  <!-- LAST NAME -->
+
+                  <div class="col-md-6">
+
+                    <label
+                      for="lastName"
+                      class="form-label"
+                    >
+
+                      Last name
+                      <span class="required">*</span>
+
+                    </label>
+
+
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="lastName"
+                      name="last_name"
+                      required
+                    >
+
+                  </div>
+
+
+
+                  <!-- EMAIL -->
+
+                  <div class="col-md-6">
+
+                    <label
+                      for="email"
+                      class="form-label"
+                    >
+
+                      Email
+                      <span class="required">*</span>
+
+                    </label>
+
+
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      name="email"
+                      required
+                    >
+
+                  </div>
+
+
+
+                  <!-- INSTITUTION -->
+
+                  <div class="col-md-6">
+
+                    <label
+                      for="institution"
+                      class="form-label"
+                    >
+
+                      Institution
+                      <span class="required">*</span>
+
+                    </label>
+
+
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="institution"
+                      name="institution"
+                      required
+                    >
+
+                  </div>
+
+
+
+                  <!-- DEPARTMENT -->
+
+                  <div class="col-md-6">
+
+                    <label
+                      for="department"
+                      class="form-label"
+                    >
+
+                      Department / Research group
+
+                    </label>
+
+
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="department"
+                      name="department"
+                    >
+
+                  </div>
+
+
+
+                  <!-- COUNTRY -->
+
+                  <div class="col-md-6">
+
+                    <label
+                      for="country"
+                      class="form-label"
+                    >
+
+                      Country
+                      <span class="required">*</span>
+
+                    </label>
+
+
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="country"
+                      name="country"
+                      required
+                    >
+
+                  </div>
+
+
+
+                  <!-- ORCID -->
+
+                  <div class="col-md-6">
+
+                    <label
+                      for="orcid"
+                      class="form-label"
+                    >
+
+                      ORCID
+
+                    </label>
+
+
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="orcid"
+                      name="orcid"
+                      placeholder="0000-0000-0000-0000"
+                    >
+
+                  </div>
+
+
+                </div>
+
+
+              </div>
+
+
+
+              <!-- ================================================= -->
+              <!-- PROJECT INFORMATION -->
+              <!-- ================================================= -->
+
+              <div class="form-section">
+
+
+                <div class="form-section-title">
+                  Research Project
+                </div>
+
+
+                <div class="form-section-description">
+
+                  Please describe the research project for which
+                  access to the data is requested.
+
+                </div>
+
+
+
+                <div class="row g-3">
+
+
+                  <!-- PROJECT TITLE -->
+
+                  <div class="col-12">
+
+                    <label
+                      for="projectTitle"
+                      class="form-label"
+                    >
+
+                      Project title
+                      <span class="required">*</span>
+
+                    </label>
+
+
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="projectTitle"
+                      name="project_title"
+                      required
+                    >
+
+                  </div>
+
+
+
+                  <!-- PI -->
+
+                  <div class="col-md-6">
+
+                    <label
+                      for="principalInvestigator"
+                      class="form-label"
+                    >
+
+                      Principal Investigator
+                      <span class="required">*</span>
+
+                    </label>
+
+
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="principalInvestigator"
+                      name="principal_investigator"
+                      required
+                    >
+
+                  </div>
+
+
+
+                  <!-- FUNDING -->
+
+                  <div class="col-md-6">
+
+                    <label
+                      for="funding"
+                      class="form-label"
+                    >
+
+                      Funding source
+
+                    </label>
+
+
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="funding"
+                      name="funding_source"
+                    >
+
+                  </div>
+
+
+
+                  <!-- PROJECT SUMMARY -->
+
+                  <div class="col-12">
+
+                    <label
+                      for="projectSummary"
+                      class="form-label"
+                    >
+
+                      Project summary
+                      <span class="required">*</span>
+
+                    </label>
+
+
+                    <textarea
+                      class="form-control"
+                      id="projectSummary"
+                      name="project_summary"
+                      required
+                    ></textarea>
+
+
+                    <div class="form-text">
+
+                      Briefly describe the scientific background,
+                      rationale and overall aims of the project.
+
+                    </div>
+
+                  </div>
+
+
+
+                  <!-- OBJECTIVES -->
+
+                  <div class="col-12">
+
+                    <label
+                      for="objectives"
+                      class="form-label"
+                    >
+
+                      Scientific objectives
+                      <span class="required">*</span>
+
+                    </label>
+
+
+                    <textarea
+                      class="form-control"
+                      id="objectives"
+                      name="scientific_objectives"
+                      required
+                    ></textarea>
+
+
+                    <div class="form-text">
+
+                      Describe the specific scientific questions
+                      that will be addressed using the requested data.
+
+                    </div>
+
+                  </div>
+
+
+                </div>
+
+
+              </div>
+
+
+
+              <!-- ================================================= -->
+              <!-- REQUESTED DATA -->
+              <!-- ================================================= -->
+
+              <div class="form-section">
+
+
+                <div class="form-section-title">
+                  Requested Data
+                </div>
+
+
+                <div class="form-section-description">
+
+                  Select the dataset you would like to access
+                  and describe how it will be used.
+
+                </div>
+
+
+
+                <!-- DATASET -->
+
+                <div class="mb-3">
+
+
+                  <label
+                    for="dataset"
+                    class="form-label"
+                  >
+
+                    Dataset
+                    <span class="required">*</span>
+
+                  </label>
+
+
+                  <select
+                    class="form-select"
+                    id="dataset"
+                    name="dataset"
+                    required
+                  >
+
+                    <option
+                      value=""
+                      selected
+                      disabled
+                    >
+
+                      Loading datasets...
+
+                    </option>
+
+                  </select>
+
+
+                  <!-- SELECTED DATASET -->
+
+                  <div
+                    id="selectedDataset"
+                    class="selected-dataset d-none"
+                  >
+
+                    <div class="selected-dataset-label">
+
+                      Selected dataset
+
+                    </div>
+
+
+                    <div
+                      id="selectedDatasetName"
+                      class="selected-dataset-name"
+                    ></div>
+
+                  </div>
+
+
+                </div>
+
+
+
+                <!-- ANALYSIS TYPE -->
+
+                <div class="mb-3">
+
+
+                  <label
+                    for="analysisType"
+                    class="form-label"
+                  >
+
+                    Planned analysis
+                    <span class="required">*</span>
+
+                  </label>
+
+
+                  <select
+                    class="form-select"
+                    id="analysisType"
+                    name="analysis_type"
+                    required
+                  >
+
+                    <option
+                      value=""
+                      selected
+                      disabled
+                    >
+
+                      Select an option
+
+                    </option>
+
+
+                    <option value="exploratory">
+                      Exploratory analysis
+                    </option>
+
+
+                    <option value="hypothesis_testing">
+                      Hypothesis-driven analysis
+                    </option>
+
+
+                    <option value="biomarker_discovery">
+                      Biomarker discovery
+                    </option>
+
+
+                    <option value="method_development">
+                      Method development
+                    </option>
+
+
+                    <option value="data_integration">
+                      Multi-omics data integration
+                    </option>
+
+
+                    <option value="other">
+                      Other
+                    </option>
+
+                  </select>
+
+                </div>
+
+
+
+                <!-- DATA USE -->
+
+                <div class="mb-3">
+
+
+                  <label
+                    for="dataUse"
+                    class="form-label"
+                  >
+
+                    Intended use of the data
+                    <span class="required">*</span>
+
+                  </label>
+
+
+                  <textarea
+                    class="form-control"
+                    id="dataUse"
+                    name="data_use"
+                    required
+                  ></textarea>
+
+
+                  <div class="form-text">
+
+                    Explain how the requested dataset will be
+                    used in your research project.
+
+                  </div>
+
+                </div>
+
+
+
+                <!-- INTEGRATION -->
+
+                <div class="mb-3">
+
+
+                  <label
+                    for="integration"
+                    class="form-label"
+                  >
+
+                    Integration with other datasets
+
+                  </label>
+
+
+                  <textarea
+                    class="form-control"
+                    id="integration"
+                    name="data_integration"
+                  ></textarea>
+
+
+                  <div class="form-text">
+
+                    If applicable, describe whether the i4MDS data
+                    will be integrated with other datasets.
+
+                  </div>
+
+                </div>
+
+
+
+                <!-- EXPECTED OUTPUTS -->
+
+                <div class="mb-3">
+
+
+                  <label
+                    for="outputs"
+                    class="form-label"
+                  >
+
+                    Expected outputs
+
+                  </label>
+
+
+                  <textarea
+                    class="form-control"
+                    id="outputs"
+                    name="expected_outputs"
+                  ></textarea>
+
+
+                  <div class="form-text">
+
+                    Describe expected publications, datasets,
+                    methods or other scientific outputs.
+
+                  </div>
+
+                </div>
+
+
+              </div>
+
+
+
+              <!-- ================================================= -->
+              <!-- DATA MANAGEMENT -->
+              <!-- ================================================= -->
+
+              <div class="form-section">
+
+
+                <div class="form-section-title">
+                  Data Management
+                </div>
+
+
+                <div class="form-section-description">
+
+                  Please describe how the requested data will be
+                  stored and accessed within your research environment.
+
+                </div>
+
+
+
+                <!-- STORAGE -->
+
+                <div class="mb-3">
+
+
+                  <label
+                    for="storage"
+                    class="form-label"
+                  >
+
+                    Data storage
+                    <span class="required">*</span>
+
+                  </label>
+
+
+                  <textarea
+                    class="form-control"
+                    id="storage"
+                    name="data_storage"
+                    required
+                  ></textarea>
+
+
+                  <div class="form-text">
+
+                    Describe where the data will be stored and
+                    the main security measures in place.
+
+                  </div>
+
+                </div>
+
+
+
+                <!-- USERS -->
+
+                <div class="mb-3">
+
+
+                  <label
+                    for="users"
+                    class="form-label"
+                  >
+
+                    Authorized users
+                    <span class="required">*</span>
+
+                  </label>
+
+
+                  <textarea
+                    class="form-control"
+                    id="users"
+                    name="authorized_users"
+                    required
+                  ></textarea>
+
+
+                  <div class="form-text">
+
+                    Indicate who will have access to the requested data.
+
+                  </div>
+
+                </div>
+
+
+
+                <!-- THIRD PARTY -->
+
+                <div class="mb-3">
+
+
+                  <label
+                    for="thirdParty"
+                    class="form-label"
+                  >
+
+                    Third-party sharing
+
+                  </label>
+
+
+                  <textarea
+                    class="form-control"
+                    id="thirdParty"
+                    name="third_party_sharing"
+                  ></textarea>
+
+
+                  <div class="form-text">
+
+                    Please describe whether the data will be shared
+                    with third parties outside your research group.
+
+                  </div>
+
+                </div>
+
+
+              </div>
+
+
+
+              <!-- ================================================= -->
+              <!-- CONSENT -->
+              <!-- ================================================= -->
+
+              <div class="form-section">
+
+
+                <div class="form-section-title">
+                  Declaration
+                </div>
+
+
+                <div class="consent-box">
+
+
+                  <div class="form-check">
+
+
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      id="agreement"
+                      name="agreement"
+                      value="I agree to comply with the i4MDS data access policy"
+                      required
+                    >
+
+
+                    <label
+                      class="form-check-label"
+                      for="agreement"
+                    >
+
+                      I confirm that the information provided
+                      in this application is accurate and that,
+                      if access is granted, I will comply with
+                      the i4MDS Data Access Policy and any
+                      applicable data-use restrictions.
+
+                      <span class="required">*</span>
+
+                    </label>
+
+
+                  </div>
+
+
+                </div>
+
+
+              </div>
+
+
+
+              <!-- ================================================= -->
+              <!-- INFORMATION -->
+              <!-- ================================================= -->
+
+              <div class="info-box mb-4">
+
+                <strong>
+                  What happens next?
+                </strong>
+
+                <br><br>
+
+                Your request will be submitted to the
+                i4MDS Data Access Committee for review.
+
+                The committee may contact you if additional
+                information is required.
+
+                A decision will be communicated to the
+                email address provided above.
+
+              </div>
+
+
+
+              <!-- ================================================= -->
+              <!-- SUBMIT -->
+              <!-- ================================================= -->
+
+              <div
+                class="submit-box"
+              >
+
+
+                <button
+                  type="submit"
+                  class="btn btn-primary btn-lg"
+                >
+
+                  Submit request →
+
+                </button>
+
+
+              </div>
+
+
+            </form>
+
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
 
 </main>
 
 
 
+<!-- ========================================================= -->
 <!-- FOOTER -->
+<!-- ========================================================= -->
 
 <footer class="portal-footer">
 
   <div class="container">
 
+
     <div class="row gy-4">
 
+
       <div class="col-lg-6">
+
 
         <a
           class="footer-brand"
@@ -1302,6 +1422,7 @@
         >
 
           i4MDS
+
           <span>
             Data Access Portal
           </span>
@@ -1311,15 +1432,18 @@
 
         <p class="footer-text">
 
-          Controlled access to multi-omics datasets
-          generated by the i4MDS Consortium.
+          Controlled access to multi-omics datasets generated
+          by the i4MDS Consortium.
 
         </p>
+
 
       </div>
 
 
+
       <div class="col-6 col-lg-3">
+
 
         <h6>
           Portal
@@ -1340,10 +1464,13 @@
           Policy
         </a>
 
+
       </div>
 
 
+
       <div class="col-6 col-lg-3">
+
 
         <h6>
           Resources
@@ -1355,7 +1482,9 @@
           target="_blank"
           rel="noopener"
         >
+
           Zenodo DataSpace
+
         </a>
 
 
@@ -1363,15 +1492,20 @@
           Contact
         </a>
 
+
       </div>
 
+
     </div>
+
 
 
     <hr>
 
 
+
     <div class="footer-bottom">
+
 
       <span>
         © 2026 i4MDS Consortium
@@ -1382,7 +1516,9 @@
         Data Access Portal
       </span>
 
+
     </div>
+
 
   </div>
 
@@ -1390,98 +1526,377 @@
 
 
 
+<!-- ========================================================= -->
+<!-- JAVASCRIPT -->
+<!-- ========================================================= -->
+
 <script>
 
-(function () {
+document.addEventListener(
+  "DOMContentLoaded",
+  async function () {
 
 
-  /* --------------------------------------------------
-     Bootstrap validation
-  -------------------------------------------------- */
+    /*
+     * ========================================================
+     * ELEMENTS
+     * ========================================================
+     */
 
-
-
-  /* --------------------------------------------------
-     Pre-select dataset from URL
-     Example:
-     request.html?dataset=i4MDS-001
-  -------------------------------------------------- */
-
-(function () {
-
-  const params =
-    new URLSearchParams(
-      window.location.search
-    );
-
-  const dataset =
-    params.get("dataset");
-
-  const datasetSelect =
-    document.getElementById("dataset");
-
-  const selectedBox =
-    document.getElementById("selectedDataset");
-
-  const selectedName =
-    document.getElementById("selectedDatasetName");
-
-  if (dataset) {
-
-    const option =
-      Array.from(
-        datasetSelect.options
-      ).find(
-        item =>
-          item.value === dataset
+    const datasetSelect =
+      document.getElementById(
+        "dataset"
       );
 
-    if (option) {
 
-      datasetSelect.value =
-        dataset;
-
-      selectedBox.classList.remove(
-        "d-none"
+    const selectedBox =
+      document.getElementById(
+        "selectedDataset"
       );
 
-      selectedName.textContent =
-        option.textContent.trim();
 
-    }
+    const selectedName =
+      document.getElementById(
+        "selectedDatasetName"
+      );
 
-  }
 
-  datasetSelect.addEventListener(
-    "change",
-    function () {
 
-      const option =
-        datasetSelect.options[
-          datasetSelect.selectedIndex
-        ];
+    /*
+     * ========================================================
+     * SHOW SELECTED DATASET
+     * ========================================================
+     */
+
+    function showSelectedDataset(
+      dataset
+    ) {
+
 
       if (
-        datasetSelect.value
-        &&
-        option
+        selectedBox &&
+        selectedName
       ) {
+
 
         selectedBox.classList.remove(
           "d-none"
         );
 
+
         selectedName.textContent =
-          option.textContent.trim();
+          dataset.id
+          + " — "
+          + dataset.title;
+
 
       }
 
-    }
-  );
 
-})();
+    }
+
+
+
+    /*
+     * ========================================================
+     * LOAD DATASETS
+     * ========================================================
+     */
+
+    async function loadDatasets() {
+
+
+      try {
+
+
+        const response =
+          await fetch(
+            "./data/datasets.json?v="
+            + Date.now()
+          );
+
+
+
+        if (!response.ok) {
+
+
+          throw new Error(
+            "Unable to load datasets.json. HTTP status: "
+            + response.status
+          );
+
+
+        }
+
+
+
+        const datasets =
+          await response.json();
+
+
+
+        /*
+         * Verify JSON structure.
+         */
+
+        if (
+          !Array.isArray(
+            datasets
+          )
+        ) {
+
+
+          throw new Error(
+            "datasets.json must contain a JSON array."
+          );
+
+
+        }
+
+
+
+        /*
+         * ====================================================
+         * POPULATE DATASET MENU
+         * ====================================================
+         *
+         * IMPORTANT:
+         *
+         * We completely rebuild the menu from datasets.json.
+         *
+         * Therefore new datasets added to datasets.json
+         * automatically appear here.
+         */
+
+        datasetSelect.innerHTML = `
+
+          <option
+            value=""
+            selected
+            disabled
+          >
+
+            Select a dataset
+
+          </option>
+
+        `;
+
+
+
+        datasets.forEach(
+          function (dataset) {
+
+
+            const option =
+              document.createElement(
+                "option"
+              );
+
+
+            option.value =
+              dataset.id;
+
+
+            option.textContent =
+              dataset.id
+              + " — "
+              + (
+                  dataset.title
+                  || ""
+                );
+
+
+            option.dataset.title =
+              dataset.title
+              || "";
+
+
+            option.dataset.zenodo =
+              dataset.zenodo_url
+              || "";
+
+
+            datasetSelect.appendChild(
+              option
+            );
+
+
+          }
+        );
+
+
+
+        /*
+         * ====================================================
+         * PRESELECT DATASET FROM URL
+         * ====================================================
+         *
+         * Example:
+         *
+         * request.html?dataset=i4MDS-002
+         */
+
+        const params =
+          new URLSearchParams(
+            window.location.search
+          );
+
+
+        const requestedDataset =
+          params.get(
+            "dataset"
+          );
+
+
+
+        if (
+          requestedDataset
+        ) {
+
+
+          const matchingDataset =
+            datasets.find(
+              function (dataset) {
+
+                return (
+                  dataset.id
+                  ===
+                  requestedDataset
+                );
+
+              }
+            );
+
+
+
+          if (
+            matchingDataset
+          ) {
+
+
+            datasetSelect.value =
+              matchingDataset.id;
+
+
+            showSelectedDataset(
+              matchingDataset
+            );
+
+
+          }
+
+
+        }
+
+
+
+        /*
+         * ====================================================
+         * DATASET CHANGE
+         * ====================================================
+         */
+
+        datasetSelect.addEventListener(
+          "change",
+          function () {
+
+
+            const selectedId =
+              datasetSelect.value;
+
+
+
+            const selectedDataset =
+              datasets.find(
+                function (dataset) {
+
+                  return (
+                    dataset.id
+                    ===
+                    selectedId
+                  );
+
+                }
+              );
+
+
+
+            if (
+              selectedDataset
+            ) {
+
+
+              showSelectedDataset(
+                selectedDataset
+              );
+
+
+            }
+
+
+          }
+        );
+
+
+
+        /*
+         * Debug information.
+         */
+
+        console.log(
+          "i4MDS datasets loaded:",
+          datasets.length,
+          datasets
+        );
+
+
+      }
+
+
+      catch (error) {
+
+
+        console.error(
+          "i4MDS dataset loading error:",
+          error
+        );
+
+
+        datasetSelect.innerHTML = `
+
+          <option
+            value=""
+          >
+
+            Unable to load datasets
+
+          </option>
+
+        `;
+
+
+      }
+
+
+    }
+
+
+
+    /*
+     * ========================================================
+     * START
+     * ========================================================
+     */
+
+    await loadDatasets();
+
+
+  }
+);
 
 </script>
+
 
 
 </body>

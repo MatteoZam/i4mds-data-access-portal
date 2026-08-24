@@ -13,5 +13,20 @@
     "access": "Restricted",
     "zenodo_url": "https://zenodo.org/records/21718032",
     "doi": "10.5281/zenodo.21718032"
+  },
+ {
+    "id": "i4MDS-002",
+    "title": "Microbiome Abundances in Feces of Patients with Myeloid Neoplasms (i4MDS data)",
+    "description": "Processed microbiome abundance data generated from shotgun metagenomic sequencing of feces samples from patients with myeloid neoplasms, deposited in the i4MDS DataSpace.",
+    "tissue": "Feces",
+    "omics": [
+      "Metagenomics",
+      "Shotgun sequencing"
+    ],
+    "disease": "MDS / AML / MPN",
+    "data_level": "Processed",
+    "access": "Restricted",
+    "zenodo_url": "https://zenodo.org/records/22080549",
+    "doi": "10.5281/zenodo.22080549"
   }
 ]

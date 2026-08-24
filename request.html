@@ -390,6 +390,8 @@
     <form
       id="accessForm"
       class="needs-validation"
+      action="https://formspree.io/f/xppaeegp"
+      method="POST"
       novalidate
     >
 
@@ -431,6 +433,7 @@
               type="text"
               class="form-control"
               id="firstName"
+              name="first_name"
               required
             >
 
@@ -462,6 +465,7 @@
               type="text"
               class="form-control"
               id="lastName"
+              name="last_name"
               required
             >
 
@@ -493,6 +497,7 @@
               type="text"
               class="form-control"
               id="institution"
+              name="institution"
               required
             >
 
@@ -524,6 +529,7 @@
               type="text"
               class="form-control"
               id="country"
+              name="country"
               required
             >
 
@@ -554,6 +560,7 @@
               type="text"
               class="form-control"
               id="department"
+              name="department"
             >
 
           </div>
@@ -577,6 +584,7 @@
               type="email"
               class="form-control"
               id="email"
+              name="email"
               required
             >
 
@@ -607,6 +615,7 @@
               type="text"
               class="form-control"
               id="orcid"
+              name="orcid"
               placeholder="0000-0000-0000-0000"
             >
 
@@ -655,6 +664,7 @@
               type="text"
               class="form-control"
               id="projectTitle"
+              name="project_title"
               required
             >
 
@@ -686,6 +696,7 @@
               type="text"
               class="form-control"
               id="pi"
+              name="principal_investigator"
               required
             >
 
@@ -716,6 +727,7 @@
               type="text"
               class="form-control"
               id="funding"
+              name="funding_source"
               placeholder="Grant / project / institutional funding"
             >
 
@@ -739,6 +751,7 @@
             <textarea
               class="form-control"
               id="projectSummary"
+              name="project_summary"
               required
               placeholder="Briefly describe the background, rationale and overall aims of the project."
             ></textarea>
@@ -770,6 +783,7 @@
             <textarea
               class="form-control"
               id="objectives"
+              name="scientific_objectives"
               required
               placeholder="Describe the main scientific questions or hypotheses that will be investigated."
             ></textarea>
@@ -844,6 +858,7 @@
             <select
               class="form-select"
               id="dataset"
+              name="dataset"
               required
             >
 
@@ -892,6 +907,7 @@
             <select
               class="form-select"
               id="analysisType"
+              name="analysis_type"
               required
             >
 
@@ -961,6 +977,7 @@
             <textarea
               class="form-control"
               id="dataUse"
+              name="data_use"
               required
               placeholder="Describe the analyses, computational methods and how the requested data will contribute to the project."
             ></textarea>
@@ -991,6 +1008,7 @@
             <textarea
               class="form-control"
               id="integration"
+              name="data_integration"
               placeholder="If applicable, describe the additional datasets and the purpose of the integration."
             ></textarea>
 
@@ -1013,6 +1031,7 @@
             <textarea
               class="form-control"
               id="outputs"
+              name="expected_outputs"
               placeholder="Expected publications, presentations, software, databases or other scientific outputs."
             ></textarea>
 
@@ -1060,6 +1079,7 @@
             <textarea
               class="form-control"
               id="storage"
+              name="data_storage"
               required
               placeholder="Describe the institutional storage environment or secure computational infrastructure."
             ></textarea>
@@ -1091,6 +1111,7 @@
             <textarea
               class="form-control"
               id="users"
+              name="authorized_users"
               required
               placeholder="List the research team or categories of users."
             ></textarea>
@@ -1121,6 +1142,7 @@
             <textarea
               class="form-control"
               id="thirdParty"
+              name="third_party_sharing"
               placeholder="Will the data be shared with collaborators or third parties?"
             ></textarea>
 
@@ -1377,80 +1399,6 @@
      Bootstrap validation
   -------------------------------------------------- */
 
-  const form =
-    document.getElementById("accessForm");
-
-
-  form.addEventListener(
-    "submit",
-    function (event) {
-
-      event.preventDefault();
-      event.stopPropagation();
-
-
-      if (!form.checkValidity()) {
-
-        form.classList.add("was-validated");
-
-        return;
-
-      }
-
-
-      /*
-       * IMPORTANT:
-       *
-       * The form is intentionally NOT connected
-       * to email/database yet.
-       *
-       * This prevents personal information from
-       * being sent through GitHub or exposed in
-       * the public repository.
-       */
-
-
-      const message =
-        document.getElementById("formMessage");
-
-
-      message.className =
-        "alert alert-info mt-4";
-
-
-      message.innerHTML = `
-
-        <strong>Application form completed.</strong>
-
-        <br><br>
-
-        The submission service is not connected yet.
-        Your information has not been transmitted.
-
-        <br><br>
-
-        The next step is to connect this form to
-        the secure submission workflow used by
-        the i4MDS Data Access Committee.
-
-      `;
-
-
-      window.scrollTo({
-
-        top:
-          message.getBoundingClientRect().top
-          + window.scrollY
-          - 120,
-
-        behavior:
-          "smooth"
-
-      });
-
-    }
-  );
-
 
 
   /* --------------------------------------------------
@@ -1459,27 +1407,24 @@
      request.html?dataset=i4MDS-001
   -------------------------------------------------- */
 
+(function () {
+
   const params =
     new URLSearchParams(
       window.location.search
     );
 
-
   const dataset =
     params.get("dataset");
-
 
   const datasetSelect =
     document.getElementById("dataset");
 
-
   const selectedBox =
     document.getElementById("selectedDataset");
 
-
   const selectedName =
     document.getElementById("selectedDatasetName");
-
 
   if (dataset) {
 
@@ -1491,17 +1436,14 @@
           item.value === dataset
       );
 
-
     if (option) {
 
       datasetSelect.value =
         dataset;
 
-
       selectedBox.classList.remove(
         "d-none"
       );
-
 
       selectedName.textContent =
         option.textContent.trim();
@@ -1509,7 +1451,6 @@
     }
 
   }
-
 
   datasetSelect.addEventListener(
     "change",
@@ -1519,7 +1460,6 @@
         datasetSelect.options[
           datasetSelect.selectedIndex
         ];
-
 
       if (
         datasetSelect.value
@@ -1531,7 +1471,6 @@
           "d-none"
         );
 
-
         selectedName.textContent =
           option.textContent.trim();
 
@@ -1539,7 +1478,6 @@
 
     }
   );
-
 
 })();
 

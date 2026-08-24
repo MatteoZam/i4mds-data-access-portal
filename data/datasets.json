@@ -20,8 +20,8 @@
     "description": "Processed microbiome abundance data generated from shotgun metagenomic sequencing of feces samples from patients with myeloid neoplasms, deposited in the i4MDS DataSpace.",
     "tissue": "Feces",
     "omics": [
-      "Metagenomics",
-      "Shotgun sequencing"
+      "Microbiome",
+      "Shotgun metagenomics"
     ],
     "disease": "MDS / AML / MPN",
     "data_level": "Processed",
